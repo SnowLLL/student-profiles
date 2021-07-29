@@ -2,8 +2,7 @@ import { Profiles, FilterName } from './components'
 
 function App() {
   return (
-    <div>
-        {/* <FilterName /> */}
+    <div className='content'>
         <Profiles />
     </div>
   );
