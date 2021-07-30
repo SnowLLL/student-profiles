@@ -15,8 +15,11 @@
   border: 2px 2px;
 }
 
-.list {
-  margin: 0 auto;
+.profiles {
+  margin-top: 230px;
+}
+
+.profile {
   padding: 50px;
 }
 
@@ -44,24 +47,41 @@
   font-size: 5em;
 }
 
-.info {
-  margin-left: 100px;
+.info,
+.tests {
+  margin-left: 120px;
 }
 
 #input {
-  width: 100%;
-  height: 150px;
-  margin-top: 20px;
+  width: 50vw;
+  height: 250px;
   padding: 50px;
   border-color: silver;
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
+  position: absolute;
+  top: 10vh;
 }
 
-.fa-plus {
-  font-size: 5em;
+.a {
+  text-decoration-line: none;
+}
+
+i {
+  font-size: 7em;
   color: silver;
   display: flex;
   flex-direction: row-reverse;
+}
+
+.tests {
+  font-size: 1em;
+  line-height: 6em;
+  margin-top: 100px;
+  display: none;
+}
+
+.space {
+  margin-left: 100px;
 }

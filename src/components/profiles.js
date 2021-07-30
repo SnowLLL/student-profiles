@@ -20,16 +20,16 @@ const Profiles =()=>{
     return(
         <div>
             <input placeholder='Search by Name' id='input' onChange={(e)=>setInput(e.target.value)}></input>
+            <div className='profiles'>
             {
                 data.filter((item)=>
                     input==='' ? item
                                : item.firstName.toLowerCase().includes(input.toLowerCase()) || item.lastName.toLowerCase().includes(input.toLowerCase())
                                     ? item : ''
                 )
-                .map((item,key)=>
-                        <Profile item ={item} key={key}/>
-                )
+                .map((item,key)=> <Profile item ={item} key={key}/>)
             }
+            </div>
         </div>
     );
 }
