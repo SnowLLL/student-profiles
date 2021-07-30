@@ -3,7 +3,7 @@ import Test from './test'
 
 const Profile =(props)=>{
     const {item} = props
-    const [display,setDisplay] = useState(false)
+    const [display,setDisplay] = useState(true)
 
     const handleToggle = (e) =>{
         e.preventDefault();
@@ -29,7 +29,10 @@ const Profile =(props)=>{
                         <Test item ={item}/>
                     </div>
                     <a href='/' className='col-1' onClick={(e)=>handleToggle(e)}>
-                        <i className="fas fa-plus" id={item.id}></i>
+                        {
+                            display ? <i className="fas fa-plus" id={item.id}></i>
+                                    :<i className="fas fa-minus" id={item.id}></i>
+                        }
                     </a>
                 </div>    
             </div>
