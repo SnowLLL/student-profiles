@@ -2,11 +2,13 @@ import React, {useState, useEffect} from 'react';
 import DATA from '../lookup/constants'
 import { fetchData } from '../lookup/fetchData';
 import '../styles/style.css'
+import Profile from './profile'
 
 // Part 1
 // to fetch Object data, and present the information on the screen.
 const Profiles =()=>{
     const [data,setData]=useState([])
+    const [input, setInput] = useState('')
 
     useEffect(()=>{
         fetchData(DATA.URL)
@@ -17,30 +19,16 @@ const Profiles =()=>{
 
     return(
         <div>
-            <input placeholder='Search by Name' id='input' ></input>
+            <input placeholder='Search by Name' id='input' onChange={(e)=>setInput(e.target.value)}></input>
             {
-                data.map((item,key)=>
-                <div key={key}>
-                    <hr />
-                    <div className='list'>
-                        <div className="row">
-                            <img className='photo col-3' src={item.pic} alt={item.id}/>
-                            <div className='col-8'>
-                                <p className='name'>{item.firstName} {item.lastName}</p>
-                                <div className='info'>
-                                    <p className='text'>Email: {item.email} </p>
-                                    <p className='text'>Company: {item.company} </p>
-                                    <p className='text'>Skill: {item.skill} </p>
-                                    <p className='text'>Average: {item.grades.reduce((a,b)=>parseFloat(a)+parseFloat(b),0) / item.grades.length}% </p>
-                                </div>
-                            </div>
-                            <div className='col-1'>
-                                <i className="fas fa-plus"></i>
-                            </div>
-                        </div>    
-                    </div>
-                </div>
-                )
+                input==='' ? data.map((item,key)=> <Profile item ={item} key={key}/>)
+                            : 
+                            
+                            data.filter(student=>
+                                    student.firstName === input||student.firstName === input)
+                                .map((item,key)=>
+                                    <Profile item ={item} key={key}/>
+                                )
             }
         </div>
     );

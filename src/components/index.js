@@ -1,8 +1,8 @@
 import Profiles from './profiles'
-import FilterName from './filterName'
+import Profile from './profile'
 
 export {
     Profiles,
-    FilterName,
+    Profile,
 }
 

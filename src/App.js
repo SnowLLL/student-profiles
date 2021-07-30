@@ -1,4 +1,4 @@
-import { Profiles, FilterName } from './components'
+import { Profiles } from './components'
 
 function App() {
   return (

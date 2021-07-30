@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { Profiles, FilterName } from './components'
-
 
 ReactDOM.render(
   <React.StrictMode>
