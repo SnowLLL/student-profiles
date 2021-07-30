@@ -22,10 +22,10 @@ const Profiles =()=>{
                 data.map((item,key)=>
                 <div key={key}>
                     <hr />
-                    <div className='container'>
-                        <div className="row align-items-start">
+                    <div className='list'>
+                        <div className="row">
                             <img className='photo col-3' src={item.pic} alt={item.id}/>
-                            <div className='col-9'>
+                            <div className='col-8'>
                                 <p className='name'>{item.firstName} {item.lastName}</p>
                                 <div className='info'>
                                     <p className='text'>Email: {item.email} </p>
@@ -33,6 +33,9 @@ const Profiles =()=>{
                                     <p className='text'>Skill: {item.skill} </p>
                                     <p className='text'>Average: {item.grades.reduce((a,b)=>parseFloat(a)+parseFloat(b),0) / item.grades.length}% </p>
                                 </div>
+                            </div>
+                            <div className='col-1'>
+                                <i className="fas fa-plus"></i>
                             </div>
                         </div>    
                     </div>
