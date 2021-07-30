@@ -21,14 +21,14 @@ const Profiles =()=>{
         <div>
             <input placeholder='Search by Name' id='input' onChange={(e)=>setInput(e.target.value)}></input>
             {
-                input==='' ? data.map((item,key)=> <Profile item ={item} key={key}/>)
-                            : 
-                            
-                            data.filter(student=>
-                                    student.firstName === input||student.firstName === input)
-                                .map((item,key)=>
-                                    <Profile item ={item} key={key}/>
-                                )
+                data.filter((item)=>
+                    input==='' ? item
+                               : item.firstName.toLowerCase().includes(input.toLowerCase()) || item.lastName.toLowerCase().includes(input.toLowerCase())
+                                    ? item : ''
+                )
+                .map((item,key)=>
+                        <Profile item ={item} key={key}/>
+                )
             }
         </div>
     );
