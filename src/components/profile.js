@@ -3,7 +3,7 @@ import Test from './test'
 
 const Profile =(props)=>{
     const {item} = props
-    const [student,setStudent]=useState(item)
+    const [studentCurrentTag,setStudentCurrentTag]=useState(item)
     const [display,setDisplay] = useState(true)
     const [tag,setTag] = useState([])
 
@@ -19,15 +19,13 @@ const Profile =(props)=>{
         e.preventDefault();
         if(e.key==='Enter'){
             setTag([...tag,value]);
-            setStudent((preStudent)=>({
+            setStudentCurrentTag((preStudent)=>({
                 ...preStudent,
-                [name]:[value]
+                [name]:tag
             }))
             return e.target.value = ''; 
         }
     }
-
-    console.log(student);
 
     return (
         <div>
