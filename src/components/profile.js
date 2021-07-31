@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Test from './test'
+import Button from './button'
 
 const Profile =(props)=>{
     const {item, callback} = props
@@ -8,20 +9,12 @@ const Profile =(props)=>{
         ...item,
         'tag':tag
     })
-    const [display,setDisplay] = useState(true)
-
-    const handleToggle = (e) =>{
-        e.preventDefault();
-        setDisplay(!display)
-        return display ? document.getElementsByClassName('tests')[e.target.id-1].style.display = 'block'
-                       : document.getElementsByClassName('tests')[e.target.id-1].style.display = 'none'
-    }
 
     const addTag = (e) =>{
         const {value} = e.target
         e.preventDefault();
         if(e.key==='Enter'){
-            setTag([...tag,value]);
+            setTag([...tag,value.toString()]);
             return e.target.value = ''; 
         }        
     }
@@ -57,12 +50,7 @@ const Profile =(props)=>{
                             <input placeholder='Add a tag' className='tag' onKeyUp ={addTag} name='tag'></input>
                         </div>
                     </div>
-                    <a href='/' className='col-1' onClick={(e)=>handleToggle(e)}>
-                        {
-                            display ? <i className="fas fa-plus" id={item.id}></i>
-                                    :<i className="fas fa-minus" id={item.id}></i>
-                        }
-                    </a>
+                    <Button item={item}/>
                 </div>    
             </div>
         </div>
