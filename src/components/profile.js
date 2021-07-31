@@ -1,11 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Test from './test'
 
 const Profile =(props)=>{
-    const {item} = props
-    const [studentCurrentTag,setStudentCurrentTag]=useState(item)
-    const [display,setDisplay] = useState(true)
+    const {item, callback} = props
     const [tag,setTag] = useState([])
+    const [studentCurrentTag,setStudentCurrentTag]=useState({
+        ...item,
+        'tag':tag
+    })
+    const [display,setDisplay] = useState(true)
 
     const handleToggle = (e) =>{
         e.preventDefault();
@@ -15,17 +18,22 @@ const Profile =(props)=>{
     }
 
     const addTag = (e) =>{
-        const {name,value} = e.target
+        const {value} = e.target
         e.preventDefault();
         if(e.key==='Enter'){
             setTag([...tag,value]);
-            setStudentCurrentTag((preStudent)=>({
-                ...preStudent,
-                [name]:tag
-            }))
             return e.target.value = ''; 
-        }
+        }        
     }
+    
+    useEffect(()=>{
+        setStudentCurrentTag((pre)=>({
+            ...pre,
+            'tag':tag
+        }))
+    },[tag])
+
+    callback(studentCurrentTag);
 
     return (
         <div>

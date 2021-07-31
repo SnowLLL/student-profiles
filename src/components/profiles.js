@@ -22,6 +22,14 @@ const Profiles =()=>{
         setInputTag(e.target.value)
     }
 
+    const updateData = (student)=>{
+        for (let i=0;i<data.length;i++){
+            if(data[i].id===student.id){
+                data[i].tag=student.tag;
+            }
+        }
+    }
+
     return(
         <div>
             <div className='searchSection'>
@@ -35,12 +43,11 @@ const Profiles =()=>{
                                    : item.firstName.toLowerCase().includes(inputName.toLowerCase()) || item.lastName.toLowerCase().includes(inputName.toLowerCase())
                                         ? item : ''
                 )
-                .filter((item)=>
-                    inputTag ==='' ? item
-                                : item.tag.toLowerCase().includes(inputTag.toLowerCase()) || item.tag.toLowerCase().includes(inputTag.toLowerCase())
-                                        ? item : ''
-                )
-                .map((item,key)=> <Profile item ={item} key={key}/>)
+                // .filter((item)=>(
+                //     inputTag === '' ? item : item.tag.map(ele=>ele.toLowerCase()).includes(inputTag.toLowerCase())
+                //                                 ? item : ''
+                // ))
+                .map((item,key)=> <Profile item ={item} callback={updateData} key={key}/>)
             }
             </div>
         </div>
