@@ -5,7 +5,7 @@ import { fetchData } from './lookup/fetchData'
 
 function App() {
   const [inputName, setInputName] = useState('')
-  const [inputTag, setInputTag] = useState('')
+  // const [inputTag, setInputTag] = useState('')
   const [data,setData]=useState([])
 
   useEffect(()=>{
@@ -23,20 +23,16 @@ function App() {
     }
 }
 
-  console.log(data)
   const filterStudent= data.filter(item=>(
     item.firstName.toLowerCase().indexOf(inputName)>-1 ||
     item.lastName.toLowerCase().indexOf(inputName)>-1
-  ))
-  .filter((item)=>(
-    item.tag !== []
   ))
 
   return (
     <div className='content'>
         <div className='searchSection'>
             <input placeholder='Search by Name' id='searchByName' value={inputName} onChange={(e)=>setInputName(e.target.value)}></input>
-            <input placeholder='Search by Tag' id='searchByTag' value={inputTag} onChange={(e)=>setInputTag(e.target.value)}></input>
+            {/* <input placeholder='Search by Tag' id='searchByTag' value={inputTag} onChange={(e)=>setInputTag(e.target.value)}></input> */}
         </div>
         <Profiles data={filterStudent} callback={updateData}/>
     </div>
