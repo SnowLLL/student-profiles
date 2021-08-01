@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Test: Student Profiles
+```diff
++ TECH STACK
+```
+React \
+JavaScript \
+Bootstrap \
+CSS \
+HTML
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```diff
++ Installation
+```
+npm install \
+npm start
 
-## Available Scripts
+```diff
++ Installation
+```
 
-In the project directory, you can run:
+#### `TO fetch data from JSON API, and present the information on the screen`
 
-### `yarn start`
+URL: https://api.hatchways.io/assessment/students 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### `To style the web page`
 
-### `yarn test`
+Replicate the style of the image and gif  as best as you can.\
+[here is a link](https://storage.googleapis.com/hatchways-app.appspot.com/assessments/data/frontend/f-1/735fae21-9b8d-4431-8978-5098a2217fd2/part2.webm) to a video to show you how the scrolling should work.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+#### `To add a text input, where a user can filter the list of students by their name (including full name)`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Below are a few images of what this should look like. \
+[Here is a video](https://storage.googleapis.com/hatchways-app.appspot.com/assessments/data/frontend/f-1/735fae21-9b8d-4431-8978-5098a2217fd2/part3.webm) of the filtering in action.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### `To make each student have an expandable list view, so that all of their test scores may be viewed.`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+See the images below for what the expanded view should look like.\
+See the images below for what the view should look like when expanded. \
+[Here is a video](https://storage.googleapis.com/hatchways-app.appspot.com/assessments/data/frontend/f-1/735fae21-9b8d-4431-8978-5098a2217fd2/part4.webm) as well of what it should look like.\
+Required: the plus should be an HTML button, and if the button is clicked on, the expansion will toggle
 
-### `yarn eject`
+#### `To add a text input field to add tags for a specific student. `
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Here is what it looks like (adding a tag called “new tag”):
