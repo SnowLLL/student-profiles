@@ -17,16 +17,16 @@
 }
 
 .profiles {
-  margin-top: 350px;
+  margin-top: 2em;
 }
 
 .profile {
-  padding: 50px;
+  padding: 1em;
 }
 
 .photo {
-  width: 400px;
-  height: 400px;
+  width: 5em;
+  height: 5em;
   border-radius: 50%;
   border-style: solid;
   border-width: thin;
@@ -36,7 +36,7 @@
 .name {
   font-family: "Raleway", sans-serif;
   font-weight: 900;
-  font-size: 7em;
+  font-size: 2em;
   text-transform: uppercase;
   margin-left: 50px;
 }
@@ -45,21 +45,23 @@
 .indent {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 5em;
+  font-size: 1.3em;
+  line-height: normal;
 }
 
 .indent {
-  margin-left: 120px;
+  margin-left: 3em;
+  /* line-height: normal; */
 }
 
 .searchSection {
   z-index: 1;
   position: absolute;
-  top: 10vh;
+  top: 10.3vh;
   display: flex;
   flex-direction: column;
-  width: 49vw;
-  line-height: 2em;
+  width: 48vw;
+  line-height: 2.2em;
 }
 
 input {
@@ -74,17 +76,17 @@ input {
 }
 
 i {
-  font-size: 7em;
+  font-size: 2.5em;
   color: silver;
   display: flex;
   flex-direction: row-reverse;
 }
 
 .tests {
-  font-size: 1em;
-  line-height: 1.3em;
-  margin-top: 100px;
-  margin-bottom: 50px;
+  font-size: 0.8em;
+  line-height: 0.8em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
   display: none;
 }
 
@@ -92,7 +94,7 @@ label {
   margin: 0.2em;
   margin-bottom: 0.8em;
   background-color: silver;
-  padding: 25px;
+  padding: 0.6em;
   width: fit-content;
   border-radius: 0.1em;
   font-size: 0.8em;
