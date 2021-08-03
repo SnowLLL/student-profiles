@@ -1,4 +1,5 @@
-# Test: [Student Profiles](https://student-profiles-test.netlify.app/) :man_student:
+# Test: [Student Profiles](https://student-profiles-test.netlify.app/) 
+:man_student:
 ```diff
 + TECH STACK
 ```
